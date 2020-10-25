@@ -19,7 +19,7 @@ class PostBooksController < ApplicationController
   def show
   end
 
-  praivate
+  private
   def post_book_params
     params.require(:post_book).permit(:title, :body)
   end
