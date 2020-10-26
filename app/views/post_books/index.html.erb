@@ -1,7 +1,7 @@
-  <!--ユーザーごとの画像を表示しよう-->
+  <!--ユーザーごとの画像を表示-->
 
 <body>
-  <h1>Books!!!!</h1>
+  <h1>Books index</h1>
       <div class="col-lg-8">
         <table class="table table-striped">
           <tr>
@@ -11,6 +11,7 @@
           </tr>
           <% @post_books.each do |post_book| %>
             <tr>
+
               <td><%= post_book.title %></td>   <!--テキストのみの表示の仕方を考える--??-->
               <td><%= post_book.body %></td>
               <td><%= link_to "Show", post_book_path(post_book.id) %></td>
