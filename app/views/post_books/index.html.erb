@@ -1,24 +1,11 @@
+  <!--homeこれはつまりマイページのHTMLにしよう-->
+
 <body>
   <h1>Books</h1>
   <div class="container">
     <div class="row">
       <div class="col-lg-4">
         <h2>マイページと投稿領域作りたい</h2>
-          <div>
-            <%= form_with model:@post_book, local:true do |f| %>
-              <div>
-                <p>Title</p>
-                <%= f.text_field :title %>
-              </div>
-              <div>
-                <p>Body</p>
-                <%= f.text_area :body %>
-              </div>
-              <div>
-                <%= f.submit 'Create Book' %>
-              </div>
-            <% end %>
-          </div>
       </div>
       <div class="col-lg-8">
         <table class="table table-striped">

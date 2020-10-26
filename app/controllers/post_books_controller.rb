@@ -6,7 +6,7 @@ class PostBooksController < ApplicationController
   def update
     post_book = Book.find(params[:id])
     post_book.update(post_book_params)
-    redirect_to post_book_path(post_book)
+    redirect_to post_book_path
   end
 
   def index

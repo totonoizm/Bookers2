@@ -1,0 +1,19 @@
+ <!--サイドバー部分 aplication.htmlでrender使って呼び出し-->
+<li class="">
+    <%= link_to 'マイページ', user_path(current_user.id) %>
+  </li>
+          <div>
+            <%= form_with model:@post_book, local:true do |f| %>
+              <div>
+                <p>Title</p>
+                <%= f.text_field :title %>
+              </div>
+              <div>
+                <p>Body</p>
+                <%= f.text_area :body %>
+              </div>
+              <div>
+                <%= f.submit 'Create Book' %>
+              </div>
+            <% end %>
+          </div>
