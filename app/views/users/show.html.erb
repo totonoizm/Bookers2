@@ -1,7 +1,6 @@
   <!--これはつまりマイページのHTMLにしよう-->
 <div class="profile-container">
   <h3 class="profile-name"><%= @user.name %></h3>
-  <%= image_tag('sample-author1.jpg', class: "img-circle pull-left profile-thumb", style: "width: 100px; height: 100px; margin-top: 20px;") %>
 <body>
   <h1>Books</h1>
       <div class="col-lg-8">
@@ -20,6 +19,7 @@
               <td><%= link_to "Destroy", post_book_path(post_book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
             </tr>
           <% end %>
+          <% paginate @post_books %>
         </table>
       </div>
     </div>
