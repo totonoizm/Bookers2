@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
+  get 'users/edit'
   root 'post_books#index'
   resources :post_books
   devise_for :users
