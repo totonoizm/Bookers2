@@ -1,6 +1,6 @@
-<p><strong>Title: </strong><%= @book.title %></p>
-<p><strong>Body: </strong><%= @book.body %></p>
+<p><strong>Title: </strong><%= @post_book.title %></p>
+<p><strong>Body: </strong><%= @post_book.body %></p>
 <p>
-  <%= link_to "Edit", edit_book_path(@book) %>|<!--@モデル名で現在参照しているデータにとぶ-->
-  <%= link_to "Back", books_path %>  <!--rake routes でurlがわかる-->
+  <%= link_to "Edit", edit_post_book_path(@post_book) %>|<!--@モデル名で現在参照しているデータにとぶ-->
+  <%= link_to "Back", post_books_path %>  <!--rake routes でurlがわかる-->
 </p>
