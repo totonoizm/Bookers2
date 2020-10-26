@@ -3,6 +3,7 @@ class PostBooksController < ApplicationController
   end
 
   def index
+    @post_books = PostBook.all
   end
 
   def new
@@ -12,11 +13,12 @@ class PostBooksController < ApplicationController
   def create
     @post_book = PostBook.new(post_book_params)
     @post_book.user_id = current_user.id
-    @post_book.saved
-    redirect_to post_book_path
+    @post_book.save
+    redirect_to post_books_path
   end
 
   def show
+    @post_book = PostBook.find(params[:id])
   end
 
   private
