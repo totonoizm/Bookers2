@@ -11,6 +11,7 @@
           </tr>
           <% @post_books.each do |post_book| %>
             <tr>
+
               <td><%= post_book.title %></td>   <!--テキストのみの表示の仕方を考える--??-->
               <td><%= post_book.body %></td>
               <td><%= link_to "Show", post_book_path(post_book.id) %></td>
