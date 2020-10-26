@@ -19,7 +19,7 @@
         <%= link_to '投稿フォーム', new_post_book_path %>
       </li>
       <li class="">
-        <%= link_to 'マイページ', "#" %>
+        <%= link_to 'Home', user_path(current_user.id) %>
       </li>
     <% else %>
       <li class="">

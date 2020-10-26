@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   root 'post_books#index'
   resources :post_books
   devise_for :users
