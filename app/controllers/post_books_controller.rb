@@ -24,6 +24,12 @@ class PostBooksController < ApplicationController
     redirect_to post_books_path
   end
 
+  def destroy
+    post_book = PostBook.find(params[:id])
+    post_book.destroy
+    redirect_to post_books_path
+  end
+
   def show
     @post_book = PostBook.find(params[:id])
   end
