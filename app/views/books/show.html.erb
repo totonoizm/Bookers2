@@ -13,7 +13,7 @@
           </tr>
             <tr>
               <td><%= attachment_image_tag @book.user, :profile_image, :fill, 30, 30, format: 'jpeg' %></td><!--bookmodelに紐付けたuserのprofile_imageを表示します-->
-              <td><%= @book.title %></td>
+              <td><%= @book.title %>  <%= link_to "Back", "#" %>  <!--戻すところを考える！rake routes でurlがわかる--></td>
               <td><%= @book.body %></td>
             </tr>
         </table>
@@ -21,7 +21,8 @@
     </div>
   </div>
 <p>
-  <%= link_to "Edit", edit_book_path(@book) %>|<!--@モデル名で現在参照しているデータにとぶ-->
-  <%= link_to "Back", user_path %>  <!--rake routes でurlがわかる-->
-  <%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+  <% if @book.user == current_user %>
+    <%= link_to "Edit", edit_book_path(@book) %>|<!--@モデル名で現在参照しているデータにとぶ-->
+    <%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+  <% end %>
 </p>
