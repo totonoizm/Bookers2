@@ -34,6 +34,9 @@
       <li class="">
         <%= link_to "ログイン", new_user_session_path %>
       </li>
+      <li class="">
+        <%= link_to "About", new_user_session_path %>
+      </li>
     <% end %>
   </ul>
 </div>
@@ -43,7 +46,7 @@
     <div class="container">
     <div class="row">
       <div class="col-lg-4">
-        <%= render'books/sidebar' %>
+        <%= render'books/sidebar', books: @books %>
       </div>
     <%= yield %>
   </body>

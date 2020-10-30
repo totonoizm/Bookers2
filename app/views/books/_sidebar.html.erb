@@ -1,7 +1,10 @@
  <!--サイドバー部分 aplication.htmlでrender使って呼び出し-->
-<li class="">
-  </li>
-        <p>User info</p>
+ <h2>UserInfo</h2>
+ <p>imgae</p>
+ <p>name</p>
+ <!--通常はログインユーザー情報、usershowの時のみユーザー情報を表示-->
+ <p>introduction</p>
+ <p>user edit btn</p>
           <div>
             <%= form_with model:@book, local:true do |f| %>
               <div>
@@ -9,7 +12,7 @@
                 <%= f.text_field :title %>
               </div>
               <div>
-                <p>Body</p>
+                <p>Opinion</p>
                 <%= f.text_area :body %>
               </div>
               <div>

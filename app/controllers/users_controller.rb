@@ -13,6 +13,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def destroy
+    reset_session
+    redirect_to root_path, notice: 'ログアウトしました。'
+  end
+
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
