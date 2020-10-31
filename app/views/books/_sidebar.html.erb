@@ -3,7 +3,7 @@
  <% if user_signed_in? %>
   <%= attachment_image_tag current_user, :profile_image, size: "40x40", format: 'jpeg',fallback: "no_image.jpg" %><!-- !!user.showへリンクしたい！！bookmodelに紐付けたuserのprofile_imageを表示します-->
    <p>introduction <%= current_user.introduction %></p>
-   <p><%#= link_to "ユーザー編集", edit_user_path(@user) %></p>
+   <p><%= link_to "ユーザー編集", edit_user_path(current_user) %></p>
 
 
  <!--通常はログインユーザー情報、usershowの時のみユーザー情報を表示-->
