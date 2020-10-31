@@ -13,6 +13,7 @@ class BooksController < ApplicationController
     @books = Book.all
   end
   def about
+
   end
   def new
     @book = Book.new
