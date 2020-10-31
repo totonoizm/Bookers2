@@ -10,7 +10,7 @@
             <th></th>
             <th colspan="3"></th>
           </tr>
-          <% @user.each do |user| %>
+          <% @users.each do |user| %>
             <tr>
               <td><%= attachment_image_tag user, :profile_image, size: "40x40", format: 'jpeg',fallback: "no_image.jpg" %></td><!-- !!user.showへリンクしたい！！bookmodelに紐付けたuserのprofile_imageを表示します-->
               <td><%= user.name %></td>

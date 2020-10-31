@@ -1,15 +1,14 @@
  <!--サイドバー部分 aplication.htmlでrender使って呼び出し-->
  <h2>UserInfo</h2>
  <% if user_signed_in? %>
-   <p>name <%= current_user.profile_image %></p>
+  <%= attachment_image_tag current_user, :profile_image, size: "40x40", format: 'jpeg',fallback: "no_image.jpg" %><!-- !!user.showへリンクしたい！！bookmodelに紐付けたuserのprofile_imageを表示します-->
    <p>introduction <%= current_user.introduction %></p>
    <p><%#= link_to "ユーザー編集", edit_user_path(@user) %></p>
 
- <% end %>
 
  <!--通常はログインユーザー情報、usershowの時のみユーザー情報を表示-->
           <div>
-            <%= form_with model:@book, local:true do |f| %>
+            <%= form_with model:book, local:true do |f| %>
               <div>
                 <p>Title</p>
                 <%= f.text_field :title %>
@@ -23,3 +22,5 @@
               </div>
             <% end %>
           </div>
+
+ <% end %>
