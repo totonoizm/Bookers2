@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'books/about' => 'books#about'
   get 'books/top' => 'books#top'
   devise_for :users
-  root 'books#index'
+  root 'books#top'
   resources :books
     resources :users
 
