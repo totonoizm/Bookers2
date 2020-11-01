@@ -1,19 +1,16 @@
   <!--ユーザーごとの画像を表示-->
-
-<body>
-  <h1>users index</h1>
       <div class="container">
     <div class="row">
       <div class="col-lg-4">
         <%= render'books/sidebar', book: @book , user: @user %>
       </div>
       <div class="col-lg-8">
-        <table class="table table-striped">
+        <table class="table">
+        <h2>Users</h2>
           <tr>
             <th>image</th>
             <th>name</th>
             <th></th>
-            <th colspan="3"></th>
           </tr>
           <% @users.each do |user| %>
             <tr>

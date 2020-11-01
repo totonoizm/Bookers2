@@ -1,21 +1,32 @@
  <!--サイドバー部分 aplication.htmlでrender使って呼び出し-->
  <h2>UserInfo</h2>
  <% if user_signed_in? %>
-  <%= attachment_image_tag current_user, :profile_image, size: "40x40", format: 'jpeg',fallback: "no_image.jpg" %><!-- !!user.showへリンクしたい！！bookmodelに紐付けたuserのprofile_imageを表示します-->
-   <p>introduction <%= current_user.introduction %></p>
+  <%= attachment_image_tag current_user, :profile_image, size: "100x100", format: 'jpeg',fallback: "no_image.jpg" %><!-- !!user.showへリンクしたい！！bookmodelに紐付けたuserのprofile_imageを表示します-->
+   <table class="table">
+     <tr></tr>
+     <tr>
+       <th>name</th>
+       <th><%= current_user.name %></th>
+     </tr>
+     <tr>
+       <th>introduction</th>
+       <th><%= current_user.introduction %></th>
+     </tr>
+   </table>
    <p><%= link_to " ", edit_user_path(current_user), class: "btn btn-default btn-block glyphicon glyphicon-wrench" %></p>
 
-
  <!--通常はログインユーザー情報、usershowの時のみユーザー情報を表示-->
+  <h2>New book</h2>
+
           <div>
             <%= form_with model:book, local:true do |f| %>
               <div>
-                <p>Title</p>
-                <%= f.text_field :title %>
+                <p><strong>Title</strong></p>
+                <%= f.text_field :title, size: "48%" %>
               </div>
               <div>
-                <p>Opinion</p>
-                <%= f.text_area :body %>
+                <p><strong>Opinion</strong></p>
+                <%= f.text_area :body, size: "47%" %>
               </div>
               <div>
                 <%= f.submit 'Create Book' %>
