@@ -1,4 +1,8 @@
  <!--サイドバー部分 aplication.htmlでrender使って呼び出し-->
+     <div class="update">
+      <%=   flash[:notice]  %>
+      <%=   flash[:update]  %>
+    </div>
  <h2>UserInfo</h2>
  <% if user_signed_in? %>
   <%= attachment_image_tag current_user, :profile_image, size: "100x100", format: 'jpeg',fallback: "no_image.jpg" %><!-- !!user.showへリンクしたい！！bookmodelに紐付けたuserのprofile_imageを表示します-->
