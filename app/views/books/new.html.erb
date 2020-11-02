@@ -1,0 +1,28 @@
+<!--投稿画面 サイドバーへ実装する-->
+      <div class="col-lg-8">
+            <% if @book.errors.any? %>
+        <div class="alert alert-warning">
+          <ul>
+            <%= @book.errors.count %>errors prohibited this book from being saved
+            <% @book.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+  <div>
+    <%= form_with model:@book, local:true do |f| %>
+        <div>
+          <p>Title</p>
+          <%= f.text_field :title %>
+        </div>
+        <div>
+          <p>Body</p>
+          <%= f.text_area :body %>
+        </div>
+        <div>
+          <%= f.submit 'Create Book' %>
+        </div>
+    <% end %>
+  </div>
+</body>
