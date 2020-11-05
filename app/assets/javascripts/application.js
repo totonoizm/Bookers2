@@ -16,3 +16,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
+
+
+var title = "javascriptを使いました！"
+alert(title)
