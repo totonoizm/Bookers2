@@ -1,0 +1,18 @@
+<!--投稿画面 サイドバーへ実装する-->
+
+  <div>
+    <%= form_with model:@book, local:true do |f| %>
+        <div>
+          <p>Title</p>
+          <%= f.text_field :title %>
+        </div>
+        <div>
+          <p>Body</p>
+          <%= f.text_area :body %>
+        </div>
+        <div>
+          <%= f.submit 'Create Book' %>
+        </div>
+    <% end %>
+  </div>
+</body>
